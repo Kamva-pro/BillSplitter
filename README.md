@@ -47,14 +47,16 @@ The primary goal of BillSplitter is to provide a seamless and efficient way for 
    ```bash
    python manage.py runserver
 
-  Usage
-Upload Menu: Open the app and upload a photo of the restaurant menu.
-OCR Processing: The app will automatically process the photo and extract the menu data.
-Select Meals: Choose your meals from the extracted menu.
-Split Bill: The app will calculate and split the bill among the selected meals.
-Development Status
-BillSplitter is currently under active development. The core functionalities are being implemented, including menu upload, OCR processing, and data storage. Future updates will include enhanced meal selection and bill splitting features.
+## Frontend (React Native)
+1. Navigate to the Frontend Directory:
+   ```bash
+   cd ../frontend
+2. Install Dependencies:
+   ```bash
+   npm install
+3. Run the app:
+   ```bash
+   npx react-native run-android # For Android
+   npx react-native run-ios     # For iOS
 
-Contributing
-Contributions are welcome! Please fork the repository and create a pull request with your changes. Ensure that your code adheres to the project's coding standards and includes appropriate tests.
 
