@@ -30,7 +30,7 @@ menu_text = ""
 # Iterate through each detected text box
 for i in range(amount_boxes):
     # Only consider text with confidence greater than 55 (adjust as needed)
-    if float(data['conf'][i]) > 55:
+    if float(data['conf'][i]) > 75:
         # Get bounding box coordinates and text
         (x, y, w, h) = (data['left'][i], data['top'][i], data['width'][i], data['height'][i])
         text = data['text'][i]
@@ -52,7 +52,3 @@ output_file = os.path.join(data_folder, "nandos_menu.txt")
 with open(output_file, "w", encoding="utf-8") as file:
     file.write(menu_text)
 
-# Optionally, display the annotated image (uncomment to show)
-# cv2.imshow("Annotated Image", img)
-# cv2.waitKey(0)
-# cv2.destroyAllWindows()
