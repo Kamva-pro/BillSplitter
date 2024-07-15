@@ -26,11 +26,11 @@ const styles = StyleSheet.create({
     borderRadius: 40,
   },
   primary: {
-    backgroundColor: "red",
+    backgroundColor: "#CD5C5C",
   },
   secondary: {
     backgroundColor: "white",
-    borderColor: "red",
+    borderColor: "#CD5C5C",
     borderWidth: 2,
     borderStyle: "solid",
   },
@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
     color: "white",
   },
   secondaryText: {
-    color: "red",
+    color: "#CD5C5C",
   },
 });
 
