@@ -1,15 +1,50 @@
 import React from "react";
+import { TouchableOpacity, Text, StyleSheet } from "react-native";
 
 function LoginButton({ text, primary, secondary }) {
-  const baseClasses = "justify-center px-16 py-5 mt-10 text-xl font-semibold whitespace-nowrap rounded-[40px]";
-  const primaryClasses = "text-white bg-pink-900";
-  const secondaryClasses = "text-pink-900 bg-white border-2 border-pink-900 border-solid";
+  const baseStyles = styles.base;
+  const primaryStyles = primary ? styles.primary : {};
+  const secondaryStyles = secondary ? styles.secondary : {};
 
   return (
-    <button className={`${baseClasses} ${primary ? primaryClasses : ''} ${secondary ? secondaryClasses : ''}`}>
-      {text}
-    </button>
+    <TouchableOpacity style={[baseStyles, primaryStyles, secondaryStyles]}>
+      <Text style={[styles.text, primary ? styles.primaryText : {}, secondary ? styles.secondaryText : {}]}>
+        {text}
+      </Text>
+    </TouchableOpacity>
   );
 }
+
+const styles = StyleSheet.create({
+  base: {
+    justifyContent: "center",
+    paddingHorizontal: 16,
+    paddingVertical: 5,
+    marginTop: 10,
+    fontSize: 20,
+    fontWeight: "600",
+    borderRadius: 40,
+  },
+  primary: {
+    backgroundColor: "pink",
+  },
+  secondary: {
+    backgroundColor: "white",
+    borderColor: "pink",
+    borderWidth: 2,
+    borderStyle: "solid",
+  },
+  text: {
+    fontSize: 20,
+    fontWeight: "600",
+    textAlign: "center",
+  },
+  primaryText: {
+    color: "white",
+  },
+  secondaryText: {
+    color: "pink",
+  },
+});
 
 export default LoginButton;
